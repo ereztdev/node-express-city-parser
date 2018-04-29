@@ -12,6 +12,7 @@ app.get('/allCities', (request, response) => {
         for (city of obj) {
             cityNameArr.push(city.name)
         }
+        //console.log(cityNameArr);
         response.send(cityNameArr);
     });
 
