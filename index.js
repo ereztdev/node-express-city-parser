@@ -8,9 +8,9 @@ app.get('/allCities', (request, response) => {
         if (err) throw err;
         let cityNameArr = [];
         let obj = JSON.parse(data);
-        let city;
-        for (city of obj) {
-            cityNameArr.push(city.name)
+
+        for (let i = 0; i<1000; i++) {
+            cityNameArr.push(obj[i].name)
         }
         //console.log(cityNameArr);
         response.send(cityNameArr);
